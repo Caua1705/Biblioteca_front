@@ -48,10 +48,10 @@ with abas[2]:
         autor_nome = st.selectbox("Selecione o autor para editar", list(lista_autores.keys()))
         autor_selecionado = lista_autores[autor_nome]
 
-        nome = st.text_input("Nome do Autor", autor_selecionado["nomeAutor"], key="edit_nome_autor")
-        data_nascimento = st.date_input("Data de Nascimento", pd.to_datetime(autor_selecionado["dataNascimento"]), format="DD/MM/YYYY", key="edit_data_nasc")
-        nacionalidade = st.text_input("Nacionalidade", autor_selecionado["nacionalidade"], key="edit_nacionalidade")
-        biografia = st.text_area("Biografia", autor_selecionado["biografia"], key="edit_biografia")
+        nome = st.text_input("Nome do Autor", key="edit_nome_autor")
+        data_nascimento = st.date_input("Data de Nascimento", format="DD/MM/YYYY", key="edit_data_nasc")
+        nacionalidade = st.text_input("Nacionalidade", key="edit_nacionalidade")
+        biografia = st.text_area("Biografia", key="edit_biografia")
 
         if st.button("Salvar Alterações"):
             dados = {
