@@ -39,7 +39,7 @@ with abas[1]:
             st.write(resposta.json())
 
 with abas[2]:
-    st.subheader("✏️ Editar Azzutor")
+    st.subheader("✏️ Editar Autor")
 
     autores = get("autor/all")
 
