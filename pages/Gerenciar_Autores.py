@@ -46,11 +46,7 @@ with abas[2]:
     if autores:
         lista_autores = {a["nomeAutor"]: a for a in autores}
         autor_nome = st.selectbox("Selecione o autor para editar", list(lista_autores.keys()))
-
-        if "autor_selecionado" not in st.session_state :
-            st.session_state["autor_selecionado"] = lista_autores[autor_nome]
-
-        autor_selecionado = st.session_state["autor_selecionado"]
+        autor_selecionado = lista_autores[autor_nome]
 
         nome = st.text_input("Nome do Autor", autor_selecionado["nomeAutor"], key="edit_nome_autor")
         data_nascimento = st.date_input("Data de Nascimento", pd.to_datetime(autor_selecionado["dataNascimento"]), format="DD/MM/YYYY", key="edit_data_nasc")
