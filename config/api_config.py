@@ -1,0 +1,1 @@
+BASE_URL = "https://biblioteca-production-8d86.up.railway.app/api/v1"
